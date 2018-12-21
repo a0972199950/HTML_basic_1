@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>文件</title>
+</head>
+
+<body>
+
+
+    <h1>我是標題1</h1>
+    <h2>我是標題2</h2>
+    <h3>我是標題3</h3>
+    <h4>我是標題4</h4>
+    <h5>我是標題5</h5>
+    <h6>我是標題6</h6>
+
+    <p>
+        <b>我是段落</b>Lorem ipsum dolor sit <br>
+        amet consectetur adipisicing elit. Laudantium magnam <br>
+        assumenda accusamus officiis, fugiat distinctio deleniti alias<br>
+        possimus aliquid aspernatur soluta, cumque harum numquam blanditiis <br>
+        <em>斜體斜體</em><br>
+    </p>
+
+    <hr>
+
+    <ol>
+        <li>清單1</li>
+
+        <ol>
+            <li>清單A</li>
+            <li>清單B</li>
+            <li>清單C</li>
+        </ol>
+
+        <li>清單2</li>
+
+        <ul>
+            <li>清單A</li>
+            <li>清單B</li>
+            <li>清單C</li>
+        </ul>
+
+        <li>清單3</li>
+    </ol>
+
+    <ul>
+        <li>清單1</li>
+        <ul>
+            <li>清單1</li>
+            <ul>
+                <li>清單1</li>
+                <ul>
+                    <li>清單1</li>
+                    <ul>
+                        <li>清單1</li>
+                        <li>清單2</li>
+                        <li>清單3</li>
+                    </ul>
+                    <li>清單2</li>
+                    <li>清單3</li>
+                </ul>
+                <li>清單2</li>
+                <li>清單3</li>
+            </ul>
+            <li>清單2</li>
+            <li>清單3</li>
+        </ul>
+        <li>清單2</li>
+        <li>清單3</li>
+    </ul>
+
+
+    <style>
+        .table,
+        tr,
+        td {
+            border: black 1px solid;
+        }
+
+        .table {
+            border-collapse: collapse;
+        }
+
+        .tr {
+            border-right: none !important;
+            border-left: none !important;
+        }
+    </style>
+
+    <table class="seating-chart">
+
+        <tr>
+            <td colspan="6" class="tr">行銷部的傢伙</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">大<br>門<br>方<br>向<br></td>
+            <td>沒人</td>
+            <td>沒人</td>
+            <td>阿紫</td>
+            <td>Jill</td>
+            <td>Momoko</td>
+        </tr>
+
+
+
+
+        <tr>
+            <td>Estela</td>
+            <td>Peiya</td>
+            <td>Reece</td>
+            <td>Hana</td>
+            <td>勇彬</td>
+        </tr>
+
+    </table>
+
+
+
+</body>
+
+</html>
+
+
+
+<!-- BEM命名法範例 -->
+
+<style>
+    .seating-chart__table {
+        border: black 1px solid;
+        border-collapse: collapse;
+        background: rgb(233, 153, 153);
+    }
+
+    .seating-chart--nonBorder {
+        background: rgb(166, 166, 230);
+    }
+</style>
+
+
+<div class="seating-chart">
+    <table class="seating-chart__table">
+        <tr>
+            <td colspan="6" class="tr">行銷部的傢伙</td>
+        </tr>
+    </table>
+
+    <table class="seating-chart__table seating-chart--nonBorder" id="someid">
+        <tr>
+            <td colspan="6" class="tr">行銷部的傢伙</td>
+        </tr>
+    </table>
+
+</div>
+
+<!-- 
+駝峰式
+class="someClassInDiv"
+
+蛇式
+class="some_class_in_div"
+
+BEM
+BLOCK       seating-chart
+ELEMENT     seating-chart__table
+            seating-chart__tr
+MODIFIER    seating-chart__table--design2
+seating-chart__table seating-chart__table--design2 
+-->
